@@ -1,4 +1,5 @@
-require 'ruby_debug.so'
+#require 'ruby_debug.so'
+require '../ext/win32/ruby_debug.so'
 require 'rubygems'
 require 'linecache'
 

@@ -29,4 +29,3 @@ Webyaml::Application.configure do
   config.assets.debug = true
 end
 
-require 'ruby-debug'
