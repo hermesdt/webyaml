@@ -17,19 +17,29 @@ gem "sprockets", :path => "vendor/plugins/sprockets-2.1.1"
 gem "mime-types", :path => "vendor/plugins/mime-types-1.17.2"
 gem 'polyglot', :path => "vendor/plugins/polyglot-0.3.3"
 gem "treetop", :path => "vendor/plugins/treetop-1.4.10"
+gem "mail", :path => "vendor/plugins/mail-2.3.0"
+gem "arel", :path => "vendor/plugins/arel-2.2.1"
+gem "tzinfo", :path => "vendor/plugins/tzinfo-0.3.31"
+gem "coffee-script-source", :path => "vendor/plugins/coffee-script-source-1.1.3"
+gem 'execjs', :path => "vendor/plugins/execjs-1.2.9"
+gem 'coffee-script', :path => "vendor/plugins/coffee-script-2.2.0"
+gem 'rack-ssl', :path => "vendor/plugins/rack-ssl-1.3.2"
+gem 'json', :path => "vendor/plugins/json-1.6.1"
+gem 'rdoc', :path => "vendor/plugins/rdoc-3.11"
+gem "thor", :path => "vendor/plugins/thor-0.14.6"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 
-gem 'json'
+#gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'coffee-rails', :path => "vendor/plugins/coffee-rails-3.1.1"
   gem 'uglifier', '>= 1.0.3'
 end
 
