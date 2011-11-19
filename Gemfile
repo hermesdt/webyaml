@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', :path => "vendor/rails"
 
-gem 'rake', :path => "vendor/plugins/rake-0.8.7"
+gem 'rake', :path => "vendor/plugins/rake-0.9.2.2"
 gem 'erubis', :path => "vendor/plugins/erubis-2.7.0"
 gem 'multi_json', :path => "vendor/plugins/multi_json-1.0.3"
 gem 'builder', :path => "vendor/plugins/builder-3.0.0"
@@ -28,8 +28,9 @@ gem 'json', :path => "vendor/plugins/json-1.6.1"
 gem 'rdoc', :path => "vendor/plugins/rdoc-3.11"
 gem "thor", :path => "vendor/plugins/thor-0.14.6"
 gem "columnize", :path => "vendor/plugins/columnize-0.3.4"
-gem "ruby-debug", :path => "vendor/plugins/ruby-debug-0.10.4"
-gem "ruby-debug-base", :path => "vendor/plugins/ruby-debug-base-0.10.4"
+#gem "ruby-debug", :path => "vendor/plugins/ruby-debug-0.10.4"
+#gem "ruby-debug-base", :path => "vendor/plugins/ruby-debug-base-0.10.4"
+gem 'ruby-debug'
 gem "linecache", :path => "vendor/plugins/linecache-0.46"
 gem 'rbx-require-relative', :path => "vendor/plugins/rbx-require-relative-0.0.5"
 gem "sass", :path => "vendor/plugins/sass-3.1.10"
@@ -49,7 +50,7 @@ group :assets do
   gem 'uglifier', :path => 'vendor/plugins/uglifier-1.1.0'
 end
 
-gem "jquery-rails", :path => "vendor/plugins/jquery-rails-1.0.18"
+#gem "jquery-rails", :path => "vendor/plugins/jquery-rails-1.0.18"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
