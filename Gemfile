@@ -27,25 +27,29 @@ gem 'rack-ssl', :path => "vendor/plugins/rack-ssl-1.3.2"
 gem 'json', :path => "vendor/plugins/json-1.6.1"
 gem 'rdoc', :path => "vendor/plugins/rdoc-3.11"
 gem "thor", :path => "vendor/plugins/thor-0.14.6"
+gem "columnize", :path => "vendor/plugins/columnize-0.3.4"
+gem "ruby-debug", :path => "vendor/plugins/ruby-debug-0.10.4"
+gem "ruby-debug-base", :path => "vendor/plugins/ruby-debug-base-0.10.4"
+gem "linecache", :path => "vendor/plugins/linecache-0.46"
+gem 'rbx-require-relative', :path => "vendor/plugins/rbx-require-relative-0.0.5"
+gem "sass", :path => "vendor/plugins/sass-3.1.10"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', :path => "vendor/plugins/sqlite3-1.3.4"
 
 #gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5.rc.2'
+  gem "sass-rails", :path => "vendor/plugins/sass-rails-3.1.5"
   gem 'coffee-rails', :path => "vendor/plugins/coffee-rails-3.1.1"
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', :path => 'vendor/plugins/uglifier-1.1.0'
 end
 
-gem 'jquery-rails'
-
-gem 'ruby-debug'
+gem "jquery-rails", :path => "vendor/plugins/jquery-rails-1.0.18"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
