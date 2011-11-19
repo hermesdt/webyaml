@@ -1,6 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.2'
+gem 'rails', :path => "vendor/rails"
+
+gem 'rake', :path => "vendor/plugins/rake-0.8.7"
+gem 'erubis', :path => "vendor/plugins/erubis-2.7.0"
+gem 'multi_json', :path => "vendor/plugins/multi_json-1.0.3"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
