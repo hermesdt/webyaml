@@ -1,5 +1,12 @@
 <p>
   name: <%= @document.name %>
 </p>
+<p>
+  content: 
+  <br />
+  <textarea cols="100" rows="100" class="yaml_content" readonly>
+<%= @document.content %>
+  </textarea>
+</p>
 
 <%= link_to "index", documents_path %>

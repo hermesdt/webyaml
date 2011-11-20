@@ -14,9 +14,15 @@ ActiveRecord::Schema.define(:version => 20111118224505) do
 
   create_table "documents", :force => true do |t|
     t.string   "name"
+    t.text     "content"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "paco", :force => true do |t|
+    t.string  "name"
+    t.integer "i"
   end
 
 end

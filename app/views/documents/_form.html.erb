@@ -1,7 +1,10 @@
+<div class="location_links">
+  <%= link_to "Index", documents_path %>
+  <%= link_to "Delete", document_path(document), :method => :delete, 
+    :confirm => "Are you sure?" unless document.new_record? %>
+</div>
+<%= errors document %>
 <%= form_for document do |f| %>
-  <div class="error_messages">
-    <%= document.error_messages %>
-  </div>
   <table class="form">
     <tr>
       <td><%= f.label :name %></td>
@@ -9,7 +12,11 @@
     </tr>
     <tr>
       <td><%= f.label :content %></td>
-      <td><%= f.file_field :content %></td>
+      <td><%= f.text_area :content, :cols => "100", :rows => "40", :class => "yaml_content" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :file %></td>
+      <td><%= f.file_field :file %></td>
     </tr>
   </table>
   <%= f.submit :class => "submit_form" %>

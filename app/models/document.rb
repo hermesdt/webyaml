@@ -1,27 +1,31 @@
 class Document < ActiveRecord::Base
-  attr_accessor :content
+  attr_accessor :file
 
   validates :name, :presence => true
 
+  before_save :check_file
   before_save :check_content
 
-  def check_content
-    if !@content.present?
-      self.errors.add(:content, "Bad content")
-      false
-    elsif !@content.is_a? ActionDispatch::Http::UploadedFile
-      self.errors.add(:content, "Bad content")
-      false
-    else
-      y = YAML.parse(@content.read) rescue nil
-      return false if y.nil?
-
-      ActiveRecord::Base.transaction do
-        
-      end
-
-      true
+  def check_file
+    if @file.present?
+      self.content = @file.read
     end
+    true
   end
 
+  def check_content
+    if !self.content.present?
+      self.errors.add(:content, "Select a file or populate the content")
+      false
+    else
+      #parse yaml content
+      begin
+        YAML.parse(self.content)
+        true
+      rescue Exception => e
+        self.errors.add(:content, "bad yaml format (#{e.to_s})")
+        false
+      end
+    end
+  end
 end

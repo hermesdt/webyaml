@@ -1,4 +1,6 @@
 <div class="document_block">
   <%= document.name %>
+  <%= link_to "Show", document_path(document) %>
+  <%= link_to "Edit", edit_document_path(document) %>
   <%= link_to "Delete", document_path(document), :method => :delete %>
 </div>
