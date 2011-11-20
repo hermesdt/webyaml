@@ -1,0 +1,8 @@
+<%= link_to "New document", new_document_path %>
+<div class="documents_container">
+<% if @documents.empty? %>
+  Empty
+<% else %>
+ <%= render :partial => "document", :collection => @documents %> 
+<% end %>
+</div>
